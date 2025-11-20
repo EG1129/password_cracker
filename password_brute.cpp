@@ -37,7 +37,6 @@ bool generateCombinations(const string& characters, string current, int maxLengt
 
     //cout << "Trying: " << current << endl; //visualize recursion
 
-    // Check for match if current is not empty
     if (!current.empty() && current == password)
     {
         cout << "Password found: " << current << endl;
@@ -57,4 +56,5 @@ bool generateCombinations(const string& characters, string current, int maxLengt
     }
     return false;
 }
+
 
