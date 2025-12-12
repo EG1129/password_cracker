@@ -10,7 +10,7 @@ using namespace std;
 using namespace std::chrono;
 
 // GPU KERNEL
-__global__ void matMulKernel(const double* A, const double* B, double* C,
+__global__ void matMulKernel(double* A, double* B, double* C,
     int r, int c, int c1)
 {
     int r_idx = blockIdx.y * blockDim.y + threadIdx.y;   // row of A, row of C
@@ -97,6 +97,7 @@ int main()
 
     return 0;
 }
+
 
 
 
